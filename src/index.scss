@@ -1,15 +1,6 @@
 :root {
   font: 16px / 1 sans-serif;
 
-  // SDG brand colors
-  --asphalt: #2f3737;
-  --bright-sky: #80ced2;
-  --lime: #b1d133;
-  --night-sky: #85577e;
-  --sand: #f7f0da;
-  --sea: #5a9090;
-  --sun: #d5562b;
-  --tangerine: #f99d1b;
 }
 
 html {
@@ -19,4 +10,37 @@ html {
 body {
   margin: 0;
   min-height: 100%;
+  background-color: antiquewhite;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem 1rem;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+h1 {
+  color: #43766C;
+}
+
+h2 {
+  color: #B19470;
+}
+
+h3 {
+  color: #76453B;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
 }
