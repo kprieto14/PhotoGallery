@@ -2,6 +2,9 @@ import React from "react";
 
 export function PhotoList() {
     return (
-        <h1>Something</h1>
+        <>
+            <h1>Animal</h1>
+            <h2>Description</h2>
+        </>
     )
 }

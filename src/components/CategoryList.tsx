@@ -2,6 +2,8 @@ import React from "react";
 
 export function CategoryList() {
     return (
-        <h1>Something</h1>
+        <div className="category-list">
+            {/* Map through PhotoList and render here*/}  
+        </div>
     )
 }
