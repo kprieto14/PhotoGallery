@@ -1,13 +1,17 @@
 import React from 'react'
 import HomeIcon from './assets/ico_home.svg'
 import { BrowserRouter as Router, Routes, Route,  } from 'react-router-dom'
-import { CategoryList } from './components/CategoryList'
+import { CategoryList } from './pages/CategoryList'
+import { PhotoList } from './pages/PhotoList'
+import { PhotoDetail } from './pages/PhotoDetail'
 
-export type PhotoItemType = {
-  id: number | undefined
-  name: string
+
+//Defining type to grabe from JSON file
+export type GalleryItemType = {
+  category: string
+  title: string
   description: string
-  photos: string[]
+  photos: { title: string, imageURL: string }[]
 }
 
 export function App() {
@@ -27,9 +31,8 @@ export function App() {
       <Router>
         <Routes>
             <Route path='/' element={<CategoryList/>} />
-            {/* <Route path='/new' element={<NewPetPage/>} />
-            <Route path='/items/:id' element={<PetItemPage/>}/>
-            <Route path='/items/delete/:id' element={<GoodbyePetItemPage/>}/> */}
+            <Route path='/:category' element={<PhotoList/>}/>
+            <Route path='/:category/:id' element={<PhotoDetail/>}/>
             <Route path='*' element={<p>Ooops, that URL is unknown.</p>}/>
         </Routes>
       </Router>
