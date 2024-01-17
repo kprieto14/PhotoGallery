@@ -3,7 +3,7 @@ import gallery from '../gallery.json'
 import { CategoryItem } from "../components/CategoryItem";
 
 export function CategoryList() {
-    //Turns JSON object into an array so that map can actually be used to generate CategoryItem
+    //Turns JSON objects into an array so that map can actually be used to generate CategoryItem
     const entries = Object.entries(gallery)
 
     return (

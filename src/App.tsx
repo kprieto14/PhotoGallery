@@ -6,7 +6,7 @@ import { PhotoList } from './pages/PhotoList'
 import { PhotoDetail } from './pages/PhotoDetail'
 
 
-//Defining type to grabe from JSON file
+//Defining type to grab from JSON file
 export type GalleryItemType = {
   category: string
   title: string
@@ -25,7 +25,7 @@ export function App() {
     <main>
       <nav>
         <img src={HomeIcon} alt="Icon of a house" />
-        <h3>Home</h3>
+        <button>Home</button>
       </nav>
 
       <Router>

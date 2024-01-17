@@ -13,6 +13,29 @@ body {
   background-color: antiquewhite;
 }
 
+article {
+  border: 1px solid #76453B;
+  max-width: 40rem;
+
+  img {
+    margin: 0;
+    max-width: 50%;
+  }
+}
+
+button {
+  background: none;
+	color: #B19470;
+	border: none;
+	padding: 0;
+  font-size: 1.5rem;
+	cursor: pointer;
+
+  &:hover {
+    color: #76453B;
+  }
+}
+
 header {
   padding: 2rem 1rem;
 }
@@ -26,7 +49,7 @@ h1 {
   color: #43766C;
 }
 
-h2 {
+h2, h4 {
   color:#76453B;
   padding: 1.5rem 1rem;
 }
@@ -35,11 +58,12 @@ h3, p {
   color: #B19470;
   justify-self: center;
   align-self: center;
+  padding-bottom: 1rem;
 }
 
 nav {
   display: flex;
-  gap: 1rem;
+  gap: .5rem;
   justify-content: center;
   align-items: center;
 }
@@ -50,9 +74,4 @@ nav {
   gap: 2rem;
   max-width: 75rem;
   padding: 2rem;
-}
-
-article {
-  border: 1px solid #76453B;
-  border-radius: 1rem;
 }
