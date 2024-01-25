@@ -6,6 +6,10 @@ export function CategoryList() {
     //Turns JSON objects into an array so that map can actually be used to generate CategoryItem
     const entries = Object.entries(gallery)
 
+    entries.map(([key, hobby]) => (
+        console.log(key, hobby)
+    ))
+
     return (
         <div className="category-list">
             {entries.map(([key, hobby]) => (

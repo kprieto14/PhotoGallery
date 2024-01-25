@@ -1,5 +1,6 @@
 import React from 'react';
 import { GalleryItemType } from '../App';
+import { Link } from 'react-router-dom';
 
 export function CategoryItem(props: GalleryItemType) {
     const photoEntries = Object.entries(props.photos)
@@ -10,8 +11,11 @@ export function CategoryItem(props: GalleryItemType) {
 
     return (
         <article>
-            <h2>{props.title}</h2>
-            <h3>{props.description}</h3>
+            <header>
+                <Link to={`/${props.category}`}><button><h2>{props.title}</h2></button></Link>
+                <h3>{props.description}</h3>
+            </header>
+
             <img src={firstPhoto.imageURL} alt={firstPhoto.title} />
             
         </article>
