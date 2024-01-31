@@ -1,14 +1,14 @@
 import React from 'react'
-import HomeIcon from './assets/ico_home.svg'
-import { BrowserRouter as Router, Routes, Route,  } from 'react-router-dom'
+import { Routes, Route  } from 'react-router-dom'
 import { CategoryList } from './pages/CategoryList'
 import { PhotoList } from './pages/PhotoList'
 import { PhotoDetail } from './pages/PhotoDetail'
+import { HomeButton } from './components/HomeButton'
 
 
 //Defining type to grab from JSON file
 export type GalleryItemType = {
-  category: string
+  category: string 
   title: string
   description: string
   photos: { title: string, imageURL: string }[]
@@ -23,19 +23,14 @@ export function App() {
     </header>
 
     <main>
-      <nav>
-        <img src={HomeIcon} alt="Icon of a house" />
-        <button>Home</button>
-      </nav>
+      <HomeButton />
 
-      <Router>
-        <Routes>
-            <Route path='/' element={<CategoryList/>} />
-            <Route path='/:category' element={<PhotoList/>}/>
-            <Route path='/:category/:id' element={<PhotoDetail/>}/>
-            <Route path='*' element={<p>Ooops, that URL is unknown.</p>}/>
-        </Routes>
-      </Router>
+      <Routes>
+          <Route path='/' element={<CategoryList/>} />
+          <Route path='/:category' element={<PhotoList/>}/>
+          <Route path='/:category/:id' element={<PhotoDetail/>}/>
+          <Route path='*' element={<p>Ooops, that URL is unknown.</p>}/>
+      </Routes>
     </main>
 
     <h4>Made with 🫶🏽 in Florida</h4>
