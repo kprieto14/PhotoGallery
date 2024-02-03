@@ -58,6 +58,12 @@ h2, h4 {
   padding: 1.5rem 1rem;
 }
 
+h2 {
+  &:hover {
+    color:#43766C;
+  }
+}
+
 h3, p {
   color: #B19470;
   justify-self: center;
@@ -70,6 +76,12 @@ nav {
   gap: .5rem;
   justify-content: center;
   align-items: center;
+
+  button {
+    &:hover {
+      color: #76453B;
+    }
+  }
 }
 
 .category-list {
