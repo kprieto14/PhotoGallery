@@ -11,7 +11,13 @@ export type GalleryItemType = {
   category: string 
   title: string
   description: string
-  photos: { title: string, imageURL: string }[]
+  photos: { title: string, imageURL: string, sourceURL: string }[]
+}
+
+export type PhotoItemType = {
+  title: string
+  imageURL: string
+  sourceURL: string
 }
 
 export function App() {
