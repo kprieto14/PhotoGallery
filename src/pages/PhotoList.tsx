@@ -37,19 +37,16 @@ export function PhotoList() {
         })
     }, [params.category])
 
-    function handleRoute() {
-        console.log('clicked')
-    }
-
     return (
         <div className='photo-list'>
             <h2>{categoryItem.title}</h2>
             <h3>{categoryItem.description}</h3>
 
-            <section onClick={handleRoute}>
+            <section>
                 {categoryItem.photos.map((key) => (
                         <PhotoItem
                             key={key.title}
+                            category={categoryItem.category}
                             title={key.title}
                             imageURL={key.imageURL}
                             sourceURL={key.sourceURL}

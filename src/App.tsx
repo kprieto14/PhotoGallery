@@ -15,6 +15,7 @@ export type GalleryItemType = {
 }
 
 export type PhotoItemType = {
+  category: string
   title: string
   imageURL: string
   sourceURL: string
@@ -34,7 +35,7 @@ export function App() {
       <Routes>
           <Route path='/' element={<CategoryList/>} />
           <Route path='/:category' element={<PhotoList/>}/>
-          <Route path='/:category/:id' element={<PhotoDetail/>}/>
+          <Route path='/:category/:title' element={<PhotoDetail/>}/>
           <Route path='*' element={<p>Ooops, that URL is unknown.</p>}/>
       </Routes>
     </main>
