@@ -86,6 +86,22 @@ nav {
   }
 }
 
+figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    color: #43766C;
+  }
+
+  img {
+    max-width: 30rem;
+    padding: 1rem 2rem;
+  }
+}
+
 .category-list {
   display: flex;
   margin: 0 auto;
@@ -124,6 +140,7 @@ nav {
   max-width: 20rem;
   border: solid 1px #76453B;
   text-align: center;
+  padding: .75rem;
 
   height: 100%;
 
