@@ -10,11 +10,17 @@ export function Breadcrumbs() {
     const crumbs = location.pathname.split('/')
         .filter(crumb => crumb !== '')
         .map(crumb => {
+            //Replace all unneccessary strings from link in crumb so that it can appear more clean on page
+            let newCrumbString = crumb
+                .replaceAll("%", " ")
+                .replaceAll("20", "")
+                .replace(" C3 9F", "ß")
+        
             currentLink += `/${crumb}`
 
             return (
                 <div className="crumb" key={crumb}>
-                    <Link to={currentLink}>{crumb}</Link>
+                    <Link to={currentLink}>{newCrumbString}</Link>
                 </div>
             )
         })
