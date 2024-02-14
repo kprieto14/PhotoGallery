@@ -6,7 +6,6 @@ import { PhotoItem } from "../components/PhotoItem";
 
 export function PhotoList() {
     const params = useParams<{ category:string }>()
-    //const history = useNavigate()
     
     const [ categoryItem, setCategoryItem ] = useState<GalleryItemType>({
         category: '',

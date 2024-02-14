@@ -152,3 +152,28 @@ figure {
     }
   }
 }
+
+.breadcrumbs {
+  > *{
+    display: inline-block;
+    margin-right: 1rem;
+  }
+
+  .crumb:before {
+    content: '>';
+    margin-right: 1rem;
+  }
+
+  .crumb:last-child:after {
+    display: none;
+  }
+
+  .crumb a {
+    text-decoration: none;
+    color: #B19470;
+
+    &:visited {
+      text-decoration: none;
+    }
+  }
+}

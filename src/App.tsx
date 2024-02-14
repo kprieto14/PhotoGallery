@@ -3,7 +3,7 @@ import { Routes, Route  } from 'react-router-dom'
 import { CategoryList } from './pages/CategoryList'
 import { PhotoList } from './pages/PhotoList'
 import { PhotoDetail } from './pages/PhotoDetail'
-import { HomeButton } from './components/HomeButton'
+import { Breadcrumbs } from './components/HomeButton'
 
 
 //Defining type to grab from JSON file
@@ -30,7 +30,7 @@ export function App() {
     </header>
 
     <main>
-      <HomeButton />
+      <Breadcrumbs />
 
       <Routes>
           <Route path='/' element={<CategoryList/>} />

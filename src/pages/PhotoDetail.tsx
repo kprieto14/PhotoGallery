@@ -17,14 +17,14 @@ export function PhotoDetail() {
         //Turns JSON object into an array to work with
         const entries = Object.entries(gallery)
         //Goes through the object array
-        entries.forEach(function(key) {
+        entries.forEach(function( key ) {
             //Always grab the actual object which is the 2nd in the array
             const entry = key[1];
             //Checks if the key is the category
             if( key.includes( String(params.category) )) {
                 //Manually sets object so that it can be set as a PhotoItemType
                 entry.photos.forEach(function(photoObject) {
-                    if(photoObject.title.includes(String(params.title))) {
+                    if( photoObject.title.includes( String(params.title) )) {
                         const foundPhoto = {
                             category: '',
                             title: photoObject.title,
